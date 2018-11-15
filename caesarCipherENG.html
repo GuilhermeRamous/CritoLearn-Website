@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Caesar Cipher</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="indexENG.html">Home</a></li>
+					<li><a href="contatoENG.html">Contact</a></li>
+					<li><a href="desafiosENG.html">Challenges</a></li>
+					<li><a href="artigosENG.html">Articles</a></li>
+					<li><a href="desenvolvedorENG.html">Developer</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="cifraCesarPT.html">Português</a>
+				<a href="#">Log-in</a>
+				<a href="#">Sing-up</a>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="text">
+				<h1 class="titulo">Caesar Cipher</h1>
+				
+				<p class="paragrafo">The cesar cipher is one of the oldest and most widely known cryptographic techniques in the world, being a cryptography based on replacing one letter of the alphabet with another using a key. The cryptographic technique is known as Caesar Cipher, since Julio Cesar (great politician and Roman military) used a cipher with exchange of three positions to protect military secrets.>
+				
+				<h5 class="subtitulo">Operation:</h5>
+				
+				<p class="paragrafo">To encrypt messages we will always need a common alphabet and an encrypted one that can be built with left-to-right or right-to-left rotation. To decrypt it is enough to make the substitution with the reverse rotation that was made to encrypt..</p>
+
+				<p class="paragrafo">Example 1: common alphabet and encrypted alphabet of key 5 that rotates from left to right</p>
+				<p class="paragrafoExemplo">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+				<p class="paragrafoExemplo">FGHIJKLMNOPQRSTUVWXYZABCDE</p>
+				<p class="paragrafo">Example 2: common alphabet and encrypted alphabet of key 5 that rotates from right to left</p>
+				<p class="paragrafoExemplo">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+				<p class="paragrafoExemplo paragrafo">VWXYZABCDEFGHIJKLMNOPQRSTU</p>
+
+				<p class="paragrafo">Note: Although there are two types of rotation, it is common to only make use of rotation from left to right. And as you can see, this does not affect encryption, the encryption of example 2 could be done using left-to-right rotation key 21.</p>
+				
+				<h5 class="subtitulo">Keyless decrypting:</h5>
+				
+				<p class="paragrafo">We can decrypt cipher-encrypted messages using intuition and logical reasoning. All of this must be based on how words are formed in the language in which the original message was written.</p>
+
+				<p class="paragrafo">Take the Portuguese language as an example, where words are formed by syllables, each syllable has a vowel (a, e, i, o, u) and each syllable usually has two or three letters. To practice, we will decrypt the JHZH message. But where can we begin?</p>
+
+				<p class="paragrafo">If you count the number of letters you will see that there are four, in this way we can intuit that there is a great possibility that the word is formed by two syllables. If we separate the message into two syllables (JH-ZH) we will see that the letter H repeats, which gives us the clue that H is a vowel.</p>
+
+				<p class="paragrafo">Since A is a letter that appears in many words of our language, I will kick that H is equivalent to A. If this is true, the key of the cipher in this case is 7. Decrypting the message using key 7, we call the following message : HOUSE.</p>
+
+				<p class="paragrafo">Basically, when you do not know the key, you should decrease the number of attempts using the properties of the language in your favor.</p>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<a href="https://www.facebook.com/profile.php?id=100029665314306&ref=bookmarks" target="_blank"><li><img src="imagens/facebook.svg" alt="Facebook icon" class="icon"></li></a>
+				<a href="https://twitter.com/Will_rar" target="_blank"><li><img src="imagens/twitter.svg" alt="Twitter icon" class="icon"></li></a>
+				<a href="https://www.linkedin.com/in/guilherme-ramos-13b1a7147/" target="_blank"><li><img src="imagens/linkedin.svg" alt="Linkedin icon" class="icon"></li></a>
+				<a href="https://github.com/GuilhermeRamous" target="_blank"><li><img src="imagens/github.svg" alt="Github icon" class="icon"></li></a>
+			</ul>
+
+			<div class="mensagem">Developed by Guilherme Ramos</div>
+
+		</footer>
+	</body>

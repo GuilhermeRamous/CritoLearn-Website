@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>What is RSA?</title>
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="indexENG.html">Home</a></li>
+					<li><a href="contatoENG.html">Contact</a></li>
+					<li><a href="#">Challenges</a></li>
+					<li><a href="artigosENG.html">Articles</a></li>
+					<li><a href="#">Developer</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="RSA_PT.html">Português</a>
+				<a href="#">Log-in</a>
+				<a href="#">Sing-up</a>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="text">
+				<h5 class="titulo">What is RSA?</h5>
+				<p class="paragrafo">RSA is a cryptosystem for public-key encryption, and is widely used for securing sensitive data, particularly when being sent over an insecure network such as the Internet.</p>
+				<p class="paragrafo">RSA was first described in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman of the Massachusetts Institute of Technology. Public-key cryptography, also known as asymmetric cryptography, uses two different but mathematically linked keys, one public and one private. The public key can be shared with everyone, whereas the private key must be kept secret. In RSA cryptography, both the public and the private keys can encrypt a message; the opposite key from the one used to encrypt a message is used to decrypt it. This attribute is one reason why RSA has become the most widely used asymmetric algorithm: It provides a method of assuring the confidentiality, integrity, authenticity and non-reputability of electronic communications and data storage.</p>
+				<p class="paragrafo">Many protocols like SSH, OpenPGP, S/MIME, and SSL/TLS rely on RSA for encryption and digital signature functions. It is also used in software programs -- browsers are an obvious example, which need to establish a secure connection over an insecure network like the Internet or validate a digital signature. RSA signature verification is one of the most commonly performed operations in IT.</p>
+
+				<h5 class="subtitulo">Explaining RSA's popularity:</h5>
+				
+				<p class="paragrafo">RSA derives its security from the difficulty of factoring large integers that are the product of two large prime numbers. Multiplying these two numbers is easy, but determining the original prime numbers from the total -- factoring -- is considered infeasible due to the time it would take even using today’s super computers.</p>
+				<p class="paragrafo">The public and the private key-generation algorithm is the most complex part of RSA cryptography. Two large prime numbers, p and q, are generated using the Rabin-Miller primality test algorithm. A modulus n is calculated by multiplying p and q. This number is used by both the public and private keys and provides the link between them. Its length, usually expressed in bits, is called the key length. The public key consists of the modulus n, and a public exponent, e, which is  normally set at 65537, as it's a prime number that is not too large. The e figure  doesn't have to be a secretly selected prime number as the public key is shared with everyone. The private key consists of the modulus n and the private exponent d, which is calculated using the Extended Euclidean algorithm to find the multiplicative inverse with respect to the totient of n.</p>
+
+				<h5 class="subtitulo">A simple, worked example:</h5>
+
+				<p class="paragrafo">Alice generates her RSA keys by selecting two primes: p=11 and q=13. The modulus n=p×q=143. The totient of n ϕ(n)=(p−1)x(q−1)=120. She chooses 7 for her RSA public key e and calculates her RSA private key using the Extended Euclidean Algorithm which gives her 103.</p>
+				<p class="paragrafo">Bob wants to send Alice an encrypted message M so he obtains her RSA public key (n, e) which in this example is (143, 7). His plaintext message is just the number 9 and is encrypted into ciphertext C as follows:</p>
+
+				<p class="paragrafoExemplo paragrafo">Me mod n = 97 mod 143 = 48 = C</p>
+
+				<p class="paragrafo">When Alice receives Bob’s message she decrypts it by using her RSA private key (d, n) as follows:</p>
+
+				<p class="paragrafoExemplo paragrafo">Cd mod n = 48103 mod 143 = 9 = M</p>
+
+				<p class="paragrafo">To use RSA keys to digitally sign a message, Alice would create a hash or message digest of her message to Bob, encrypt the hash value with her RSA private key and add it to the message. Bob can then verify that the message has been sent by Alice and has not been altered by decrypting the hash value with her public key. If this value matches the hash of the original message, then only Alice could have sent it (authentication and non-repudiation) and the message is exactly as she wrote it (integrity). Alice could, of course, encrypt her message with Bob’s RSA public key (confidentiality) before sending it to Bob. A digital certificate contains information that identifies the certificate's owner and also contains the owner's public key. Certificates are signed by the certificate authority that issues them, and can simplify the process of obtaining public keys and verifying the owner</p>
+
+				<h5 class="subtitulo">Security of RSA</h5>
+
+				<p class="paragrafo">As discussed, the security of RSA relies on the computational difficulty of factoring large integers. As computing power increases and more efficient factoring algorithms are discovered, the ability to factor larger and larger numbers also increases. Encryption strength is directly tied to key size, and doubling key length delivers an exponential increase in strength, although it does impair performance. RSA keys are typically 1024- or 2048-bits long, but experts believe that 1024-bit keys could be broken in the near future, which is why government and industry are moving to a minimum key length of 2048-bits. Barring an unforeseen breakthrough in quantum computing, it should be many years before longer keys are required, but elliptic curve cryptography is gaining favor with many security experts as an alternative to RSA for implementing public-key cryptography. It can create faster, smaller and more efficient cryptographic keys. Much of today’s hardware and software is ECC-ready and its popularity is likely to grow as it can deliver equivalent security with lower computing power and battery resource usage, making it more suitable for mobile apps than RSA. Finally, a team of researchers which included Adi Shamir, a co-inventor of RSA, has successfully determined a 4096-bit RSA key using acoustic cryptanalysis, however any encryption algorithm is vulnerable to this type of attack.</p>
+
+				<p class="paragrafo">The inventors of the RSA algorithm founded RSA Data Security in 1983. The company was later acquired by Security Dynamics, which was in turn purchased by EMC Corporation in 2006. The RSA algorithm was released to the public domain by RSA Security in 2000.</p>
+
+				<p class="paragrafo">Original article: <a class="link" href="https://searchsecurity.techtarget.com/definition/RSA" target="__blank">https://searchsecurity.techtarget.com/definition/RSA</a></p>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<a href="https://www.facebook.com/home.php" target="_blank"><li><img src="imagens/facebook.svg" alt="Facebook icon" class="icon"></li></a>
+				<a href="https://twitter.com/Will_rar" target="_blank"><li><img src="imagens/twitter.svg" alt="Twitter icon" class="icon"></li></a>
+				<a href="https://www.linkedin.com/in/guilherme-ramos-13b1a7147/" target="_blank"><li><img src="imagens/linkedin.svg" alt="Linkedin icon" class="icon"></li></a>
+				<a href="https://github.com/GuilhermeRamous" target="_blank"><li><img src="imagens/github.svg" alt="Github icon" class="icon"></li></a>
+			</ul>
+
+			<div class="mensagem">Developed by Guilherme Ramos</div>
+
+		</footer>
+	</body>

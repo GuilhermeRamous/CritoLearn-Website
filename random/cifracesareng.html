@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cifra de Cesar</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">Challeges</a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Developer</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>
+			</div>
+		</header>
+		<nav style="height: 1670px"></nav>
+		<main style="height: 1670px">
+			<div class="texto" style="position: relative; bottom: height: 100%">
+				<h1>Caesar Cipher</h1>
+				
+				<p style="margin-bottom: 25px">The cesar cipher is one of the oldest and most widely known cryptographic techniques in the world, being a cryptography based on replacing a letter of the alphabet with another form of a key. Such a cryptographic technique is known as cesar cipher, since Julio Cesar (great politician and Roman military) uses a cipher with exchange of three positions to protect military secrets.</p>
+				<h5 class="subtitulo">Operation</h5>
+				<p style="margin-bottom: 25px>Para criptografar mensagens sempre precisaremos de um alfabeto comum e outro cifrado que pode ser construído com rotação da esquerda para direita ou da direita para esqierda. Para descriptografar basta fazer a substituição com a rotação reversa a que foi feita para criptografar.</p>
+				<p style="margin-bottom: 12.5px">Example 1: common alphabet and encrypted alphabet of key 5 that rotates from left to right</p>
+				<p style="text-align: center;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+				<p style="text-align: center; margin-bottom: 12.5px">FGHIJKLMNOPQRSTUVWXYZABCDE</p>
+				<p style="margin-bottom: 12.5px">Example 2: common alphabet and encrypted alphabet of key 5 that rotates from right to left</p>
+				<p style="margin-bottom: 25px; text-align: center;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+				<p style="margin-bottom: 12.5px; text-align: center">VWXYZABCDEFGHIJKLMNOPQRSTU</p>
+				<p style="margin-bottom: 25px">Note: Although there are two types of rotation, it is common to only use the rotation from left to right. And you can see that this does not affect encryption, as the encryption of example 2 could be done using left-to-right rotation key 21.</p>
+				<h5 class="subtitulo">Keyless decrypting:</h5>
+				<p style="margin-bottom: 25px">We can decrypt cipher-encrypted messages using intuition and logical reasoning. All of this must be based on how words are formed in the language in which the original message is found.</p>
+				<p style="margin-bottom: 25px">We can decrypt cipher-encrypted messages using intuition and logical reasoning. All of this must be based on how words are formed in the language in which the original message is found.</p>
+				<p style="margin-bottom: 25px">Take the Portuguese language as an example, where words are formed by syllables, each syllable has a vowel (a, e, i, o, u) and each syllable usually has two or three letters. To practice, we will decrypt the JHZH message. But where can we begin?</p>
+				<p style="margin-bottom: 25px">If you count the number of letters you will see that there are four, in this way we can intuit that there is a great possibility that the word is formed by two syllables. If we separate the message into two syllables (JH-ZH) we see that the letter H repeats, which gives us the hint that H is a vowel.</p>
+				<p style="margin-bottom: 25px">Since A is a letter that appears in many words of our language, I will kick that H is equivalent to A. If this is true, the key of the cipher in this case is 7. Decrypting the message using key 7, we call the following message : CASA (home in Portuguese).</p>
+				<p style="margin-bottom: 25px">Basically, when you do not know the key, you should decrease the number of attempts using the properties of the language in your favor.</p>
+
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

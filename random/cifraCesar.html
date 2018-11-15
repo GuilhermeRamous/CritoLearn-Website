@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cifra de Cesar</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contato</a></li>
+					<li><a href="#">Desafios</a></li>
+					<li><a href="#">Artigos</a></li>
+					<li><a href="#">Desenvolvedor</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>LO 2
+
+			</div>
+		</header>
+		<nav style="height: 1670px"></nav>
+		<main style="height: 1670px">
+			
+			<div class="texto" style="position: relative; bottom: height: 100%">
+				<h1>Cifra de Cesar</h1>
+
+				<p class="paragrafo">A cifra de cesar é uma das mais antigas e conhecidas tecnicas de criptografia do mundo, sendo uma criptografia  baseada na substituição de uma letra do alfabeto por outra utilizando uma chave. Tal tecnica criptográfica é conhecida como cifra de cesar, pois Julio Cesar (grande político e militar romano) usava uma cifra com troca de três posições para proteger segredos miltares.</p>
+
+				<h5 class="subtitulo">Funcionamento:</h5>
+
+				<p class="paragrafo">Para criptografar mensagens sempre precisaremos de um alfabeto comum e outro cifrado que pode ser construído com rotação da esquerda para direita ou da direita para esqierda. Para descriptografar basta fazer a substituição com a rotação reversa a que foi feita para criptografar.</p>
+
+				<p class="paragrafo">Exemplo 1: alfabeto comum e alfabeto cifrado de chave 5 que rotaciona da esquerda para direita</p>
+				<p style="text-align: center">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+				<p style="margin-bottom: 12.5px; text-align: center">FGHIJKLMNOPQRSTUVWXYZABCDE</p>
+
+				<p class="paragrafo">Exemplo 2: alfabeto comum e alfabeto cifrado de chave 5 que rotaciona da direita para a esquerda</p>
+				<p class="exemplo">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+				<p class="exemplo paragrafo">VWXYZABCDEFGHIJKLMNOPQRSTU</p>
+
+				<p class="paragrafo">Nota: Apesar de haver dois tipos de rotação, é comum somente fazer uso da rotação da esquerda para direira. E pode ver que isso não afeta a criptografia, pois a encriptação do exemplo 2 poderia ser feito usando chave 21 de rotação da esquerda para direita.</p>
+
+				<h5 class="paragrafo">Descriptografando sem chave:</h5>
+
+				<p class="paragrafo">Podemos descriptografar mensagens criptografadas em cifra de cesar usando intuição e raciocício lógico. Tudo isso deve estar baseado na forma como as palavras são formadas na língua em que a mensagem original se encontra.</p>
+
+				<p class="paragrafo">Tome a língua portuguesa como exemplo, em que as palavras são formadas por sílabas, cada sílaba possui uma vogal (a,e,i,o,u) e cada sílaba possui geralmente duas ou três letras. Para praticarmos, descriptografaremos a mensagem JHZH. Mas por onde podemos começar?</p>
+
+				<p class="paragrafo">Se contar o número de letras verá que há quatro, dessa forma podemos intuir que há uma grande possibilidade de que a palavra seja formada por duas sílabas. Se separarmos a mesagem em duas sílabas (JH-ZH) vermos que a letra H se repete, o que nos da a pinta de que H é uma vogal.</p>
+
+				<p class="paragrafo">Já que A é uma letra que aparece em muitas palavras de nossa lingua, chutarei que H é equivalente à  A. Se isso for verdade, a chave da cifra, nesse caso, é 7. Descriptografando a mensagem usando chave 7, chaegamos a seguinte mensagem: CASA.</p>
+
+				<p class="paragrafo">	Basicamente, quando não se sabe o a chave, deve-se diminuir o número de tentativas usando as propriedades da língua ao seu favor.</p>
+			</div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

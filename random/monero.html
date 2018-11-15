@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>História da Monero</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contato</a></li>
+					<li><a href="#">Desafios</a></li>
+					<li><a href="#">Artigos</a></li>
+					<li><a href="#">Desenvolvedor</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>
+			</div>
+		</header>
+		<nav style="height: 4690px"></nav>
+		<main style="height: 4690px">
+			<div class="texto" style="position: relative; height: 100%">
+				<h1>História da Monero</h1>
+
+				<p style="margin-bottom: 25px">A Monero (XMR) é uma das primeiras e mais conhecidas das criptomoedas anônimas. No sistema Bitcoin, é possível obter informações dos usuários – apesar de difícil e custoso, isso interessa a algumas agências governamentais. Entenda como funciona a Monero, uma criptomoeda que promete proteger a sua privacidade 100%.</p>
+
+				<h5 class="subtitulo">A história por trás da Monero</h5>
+
+				<p style="margin-bottom: 25px">A XMR começou como Bytecoin, em julho de 2012, criada sobre a plataforma CryptoNote. A CryptoNote é a base de muitas outras criptomoedas (Dash e Nióbio, por exemplo), e, apesar de ser parecida com o Bitcoin, tem diferenças significativas. Por exemplo, as assinaturas são feitas em anel – várias chaves públicas participam de cada transação. Assim, não é possível saber quem é o recebedor ou pagador originais.</p>
+				<p style="margin-bottom: 25px">A Bytecoin tinha potencial, mas conforme usuários foram percebendo aspectos estranhos, um fork foi realizado. Assim, nasceu a Bitmonero, eventualmente resumido para Monero. O nome vem do Esperanto para “moeda”.</p>
+				<p style="margin-bottom: 25px">É liderada por 7 programadores. 5 deles são anônimos e dois, Riccardo Spagni e David Latapie, vieram a público.</p>
+				<p style="margin-bottom: 25px">A intenção original da criptomoeda era dar controle total ao usuário. Cada um é responsável por seus recursos, e é impossível saber onde cada um gastou seu dinheiro. Claro, isso quer dizer que a XMR pode ser amplamente usada por criminosos – os criadores do vírus WannaCry logo transferiram os Bitcoins recebidos para Monero</p>
+
+				<h5 class="subtitulo">Monero e a fungibilidade</h5>
+
+				<p style="margin-bottom: 25px">A fungibilidade é um conceito jurídico, e quer dizer coisas da mesma espécie que são equivalentes. Ou seja, uma nota de R$50 é igual a todas as outras notas de R$50 – ao realizar um pagamento ninguém pede por uma nota específica. A mesma coisa se dá com commodities em geral – sacas de 50kg de arroz são iguais entre si. Contudo, um quadro de Van Gogh não é igual ao outro, e muito menos igual a um de outros artistas. Quadros, portanto, são não fungíveis, já que não são equivalentes, apesar de serem da mesma espécie. Mas o que isso tem a ver com criptomoedas?</p>
+				<p style="margin-bottom: 25px">No blockchain do Bitcoin, cada criptomoedas é marcada. É possível ver com o que ela foi usada em cada trecho do blockchain, desde a sua criação. Assim, se foi usada em atividades ilegais no passado, aquela unidade, mesmo que subdividida ou juntada a outras, ficará para sempre manchada, o que pode gerar alguns problemas para o usuário.</p>
+				<p style="margin-bottom: 25px">No blockchain da Monero, como as transações são privadas, é impossível saber o histórico de uma unidade específica. Não existe um histórico de negociação. Não existem criptomoedas limpas ou sujas em seu blockchain – ou seja, são 100% fungíveis.</p>
+
+				<h5 class="subtitulo">Monero e a mineração</h5>
+
+				<p style="margin-bottom: 25px">Há alguns meses, a Monero declarou guerra aos mineradores profissionais. Uma atualização do código impediu o uso de máquinas ASIC para a validação de transações. Isso por conta do sistema da CryptoNote, o CryptoNight, desenhado para ser ser mais democrático e descentralizado.</p>
+				<p style="margin-bottom: 25px">Duas características dão essa resistência. Assim como no caso da Litecoin, memória é um fator além de poder de processamento puro. Isso desestimula a criação de pools, já que simplesmente fazer cálculos de confirmação em paralelo é menos eficiente. Além disso, pelas instruções do código, a mineração é mais amigável para CPUs e GPUs, instrumentos mais usados por usuários comuns.</p>
+				<p style="margin-bottom: 25px">Outra peculiaridade é como a recompensa é dada aos mineradores. Primeiro, a recompensa é dinâmica – cada bloco cria criptomoedas de acordo com uma equação complexa que merece um post por si só.</p>
+				<p style="margin-bottom: 25px">Além disso, o recebimento de taxas controla o tamanho do bloco. Como não há limite de tamanho, para evitar o congestionamento da rede, as taxas diminuem quanto maior o bloco minerado. O software faz uma média do tamanho dos últimos 100 blocos (M100), e se o novo bloco for maior que isso, o minerador sofre um desconto quadrático nas taxas. Segue exemplo na tabela abaixo:</p>
+				<p style="margin-bottom: 25px">Além disso, blocos com mais de 2*M100 são considerados inválidos e blocos com menos de 60kb nunca tem desconto nas taxas, independente do valor de M100.</p>
+
+				<h5 class="subtitulo">Monero e a Escalabilidade</h5>
+
+				<p style="margin-bottom: 25px">A escalabilidade do Bitcoin é um assunto há muito discutido. Aprovando apenas 7 transações por segundo, não é um sistema de pagamentos viável em escala mundial. Um dos maiores motivos para esse limite é o tamanho máximo do bloco: 1MB. A discussão sobre o tamanho do bloco levou inclusive a um hard fork, que criou o Bitcoin Cash.</p>
+				<p style="margin-bottom: 25px">A Monero não tem limite de tamanho de bloco. Contudo, isso traz o problema de defesa contra mineradores maliciosos, que podem aumentar o tamanho de um bloco para congestionar a rede. A XMR evita isso mexendo na recompensa dos mineradores, conforme explicado no tópico acima.</p>
+
+				<h5 class="subtitulo">Como a Monero protege a privacidade</h5>
+
+
+				<h5></h5>
+
+				<p style="margin-bottom: 25px">O principal diferencial da XMR é sua total privacidade, apesar de algumas discussões sobre o sistema de segurança usado por eles. Para entender como ela funciona, é preciso saber algumas coisas: como uma transação é geralmente realizada com criptomoedas, o que são assinaturas em anel, o que são endereços anônimos e o que são Ring Confidential Transactions. Todos esses aspectos estão baseados no sistema de chaves múltiplas da Monero.</p>
+
+				<h5 class="subtitulo">Chaves múltiplas</h5>
+
+				<p style="margin-bottom: 25px">Quando falamos em Bitcoin, Ether e outras criptos, elas tem apenas uma chave pública e uma privada. A Monero tem quatro chaves: duas privadas e duas públicas, cada uma com o nome de “view” e “spend”.</p>
+				<p style="margin-bottom: 25px">Suponha que você queira enviar 150 XMR para alguém. A sua chave pública “view” e a chave pública “spend” dessa pessoa criam uma chave pública única e secreta. Você então envia os fundos para esse endereço. A chave privada “spend” do recebedor então vasculha todo o blockchain, procurando a sua transação. Uma vez encontrada, é preciso usar a chave privada “view”, que confirma que a transação era de fato para aquela pessoa, que recebe os fundos.</p>
+				<p style="margin-bottom: 25px">Assim, é impossível saber a identidade do recebedor já que não existe o conceito de “carteira”, como no Bitcoin. Cada vez que as partes fazem uma transação, um endereço público diferente é usado. Contudo, quem envia estaria exposto, pois seria possível rastrear de que chave pública “view” aquele pagamento veio.</p>
+
+				<h5 class="subtitulo">Assinaturas em Anel</h5>
+
+				<p style="margin-bottom: 25px">As assinaturas em anel resolvem esse problema. O sistema mudou um pouco, mas é mais interessante estudar como era originalmente, para entender as mudanças.</p>
+				<p style="margin-bottom: 25px">Ao enviar os fundos, você decide qual o “tamanho do anel” que gostaria. Quanto maior o anel, mais complexa e mais cara em termos de taxa a transação será. O anel são outras transações que, somadas, dão o mesmo valor que se quer transferir. Contudo, não há com o que se preocupar, já que essas transações, apesar de reais, são um disfarce.</p>
+
+				<p style="margin-bottom: 25px">Vamos supor que houve a escolha de um tamanho de anel de 5. 4 chaves privadas serão falsas e apenas uma verdadeira. A chave privada da verdadeira irá comunicar ao blockchain de onde os fundos estão vindo e para quem se destinam. Só que para alguém de fora, é impossível saber qual das cinco chaves ativou a transação.</p>
+				<p style="margin-bottom: 25px">Suponha que João queira entregar recursos a Maria, em reais, e escreve para ela um cheque. Ela conhece a assinatura de João, mas ninguém mais conhece. João então manda entregar um cheque com cinco assinaturas – Maria imediatamente vai saber que foi João que mandou, e que aquela transação é válida. Só que se esse cheque cair nas mãos de outra pessoa, ela não saberá qual das cinco assinaturas é a correta.</p>
+				<p style="margin-bottom: 25px">Contudo, como evitar o gasto duplo de dinheiro? Se é tudo secreto, como os mineradores vão saber se a pessoa de fato tem aquela quantidade?</p>
+				<p style="margin-bottom: 25px">A matemática por trás da criptografia que permite isso é muito complexa, e vai além do escopo desse artigo. Contudo, o esquema funciona da seguinte forma: cada transação gera uma imagem única, e se uma pessoa tentar gastar duas vezes a mesma cripto, essa imagem sairá duplicada. Os mineradores podem detectar no blockchain se aquela imagem é de fato única e, se for, não houve gasto duplo.</p>
+
+				<h5 class="subtitulo">Ring Confidential Transactions</h5>
+
+				<p style="margin-bottom: 25px">O sistema de chave múltiplas torna o recebedor anônimo. As assinaturas em anel tornam quem envia anônimo. Mas como esconder o valor da transação? Para entender isso, precisamos analisar antes e depois de uma mudança chamada Ring CT.</p>
+				<p style="margin-bottom: 25px">Se alguém tivesse que mandar 12,5 XMR, a transação seria quebrada em 3: uma de 10, uma de 2 e uma de 0,5. Isso faz um bom trabalho de esconder a identidade de quem está mandando, já que cada uma delas teria seu próprio anel aleatório, mas o valor das transações ainda era visível no blockchain. O que o Ring CT faz é usar a criptografia para esconder e quebrar o valor enviado em montantes aleatórios. Com um número indeterminado de anéis e o valor numérico escondido, é literalmente impossível obter qualquer informação de uma transação sobre Monero.</p>
+
+			</div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

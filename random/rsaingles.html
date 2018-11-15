@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RSA Criptography</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Challeges</a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Developer</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>
+			</div>
+		</header>
+		<nav style="height: 2500px"></nav>
+		<main style="height: 2500px">
+			<div class="texto" style="position: relative; bottom: height: 100%">
+				<h1>RSA Criptography</h1>
+
+				<p style="margin-bottom: 25px">Hello guys. This is the first in a series of messages in which we will talk about RSA encryption. RSA is the most widely used encryption method in the world and the
+				The series is showing mathematics and implementing it in the form of a computational algorithm. Attention: While following a series you will find that there is no magic in the process and sometimes it can be a little disappointing.</p>		
+				<h5 class="subtitulo">History</h5>
+				<p style="margin-bottom: 25px">From classical antiquity, and perhaps even before, people use cryptography to convey secret messages. The idea was simple: I have a method or key that I use to "shuffle" a message and only those who know this method or message would be able to make this message readable again.</p>
+
+				<p style="margin-bottom: 25px">The major problem with this approach is that both the sender and receiver have to know the encryption key. For example, if I - that I am in SP - wanted to send a message encrypted by me to the Lambda3 RJ people now, I would have to find a safe way to send them the key I used to encrypt the text. How could I send this key securely? I could not.</p>
+
+				<p style="margin-bottom: 25px">This approach is known as symmetric key cryptography. To solve her problem, we began to think of an asymmetric key cryptography, that is, with two or more keys. I think the most intuitive example of this is this:</p>
+
+
+
+				<p style="margin-bottom: 25px">The advantage of this approach is that it was not necessary for Lambda 3 SP to send its key to RJ. The problem is that it took three trips (!), And that we did not encrypt the message itself, but the "repository" of the message.</p>
+
+				<p style="margin-bottom: 25px">In the 1970s two computer scientists working at MIT, Ronald Rivest and Adi Shamir, were engaged in creating an efficient asymmetric key cryptography method. They were aided by the mathematician Leonard Adleman, who validated their ideas from the mathematical point of view. In 1977 all three registered the RSA method patent.</p>
+
+				<h5 class="subtitulo">How it works??</h5>
+				<p style="margin-bottom: 25px">This is the legal part. With RSA I have two keys: one public and one private. The public key, as the name says, I can distribute freely; anyone can use my public key to encrypt a message to me. However, it is only possible to decrypt the message using my private key, which I keep
+				in secret.</p>
+
+				<p style="margin-bottom: 25px">Using the idea of the previous example, for Lambda SP to send a message to Lambda RJ, it is enough that SP encrypts the message with the public key of Lambda RJ and sends it. Only RJ will be able to read the message because only they have the private key needed to decrypt the message.</p>
+
+				<p style="margin-bottom: 25px">The RSA was built on one of the most classical areas of mathematics, the Theory of Numbers. It relies on the difficulty of factoring a number into its prime components. First let's remember that a prime number is a number that can only be divided by itself and by 1 (in an exact division, without broken numbers); second, we have to remember how to find the prime factors of a number.</p>
+
+				<p style="margin-bottom: 25px">According to the Fundamental Theorem of Arithmetic every positive integer greater than 1 can be decomposed uniquely into a product of prime numbers, for example:</p>
+
+				<p style="margin-bottom: 25px; text-align: center">26 = 2 * 13</p>
+				<p style="margin-bottom: 25px; text-align: center">44 = 2 * 2 * 11</p>
+				<p style="margin-bottom: 25px">Fatorar números pequenos é algo simples, mas fatorar números grandes é bem difícil e demorado, pois este é um problema que não pode ser resolvido em um tempo polinomial determinístico, ou falando de forma bem simplificada, não há uma fórmula para isto.</p>
+
+				<p style="margin-bottom: 25px">And how does RSA use all this? Public and private keys are generated based on the multiplication of two prime numbers. The result of this multiplication will be public, but if the number is large enough, factoring this number to discover the primes we have multiplied to form it may take years.</p>
+
+				<p style="margin-bottom: 25px">It is this particularity that comes RSA security. Actually it is not impossible to break the RSA encryption, but how to do this would take some good years or decades, the idea becomes impracticable.</p>
+
+				<p>Prepare paper, pen and calculator because in the next post we will perform the step-by-step method and encrypt / decrypt some messages. See you!</p>
+			</div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

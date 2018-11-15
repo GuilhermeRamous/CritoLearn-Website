@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assinaturas Digitais</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contatoPT.html">Contato</a></li>
+					<li><a href="desafiosPT.html">Desafios</a></li>
+					<li><a href="artigosPT.html">Artigos</a></li>
+					<li><a href="desenvolvedorPT.html">Desenvolvedor</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="digitalSignatures.html">English</a>
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="text">
+				<h1 class="titulo">Assinaturas Digitais</h1>
+				
+				<p class="paragrafo">Para entender esse esquema, vamos relembrar alguns atributos da assinatura manuscrita usual. Suponha que o Dr. Benson tenha assinado uma receita. Então idealmente sua assinatura deve ter as seguintes características:</p>
+				
+				<p class="paragrafoExemplo">* Apenas o Dra. Benson pode produzir essa assinatura, e</p>
+				<p class="paragrafoExemplo paragrafo"> * qualquer um pode verificar se esta assinatura é dela.</p>
+				
+				<p class="paragrafo">Só podemos alcançar essas características usando sistemas assimétricos como chave pública</p>
+				
+				<p class="paragrafoExemplo paragrafo">1. Dr. Benson quer assinar uma mensagem m, então ela</P>
+				<p class="paragrafoExemplo">* cifra m com sua chave privada Da (que ela conhece exclusivamente)</p>
+				<p class="paragrafoExemplo paragrafo">* publica a mensagem assinada desta forma Da (m) junto com a própria mensagem m. (Embora a mensagem criptografada possa servir como assinatura, tanto o documento simples quanto a mensagem criptografada formam uma unidade mais forte e obtêm o título de "certificado" para autenticação pessoal.)</P>
+				<p class="paragrafo paragrafoExemplo">2. Qualquer outro participante pode verificar a assinatura eletrônica Da (m) usando a chave pública Ea do Dr. Benson e verificar se m e Da (m) se encaixam.</p>
+				<p class="paragrafo paragrafoExemplo">Se trabalharmos com o RSA, a verificação funciona aplicando ea à assinatura Da (m) e verificando se a seguinte equação é válida. </P>
+				<p class="paragrafo paragrafoExemplo"> Ea(Da(m)) = m</P>
+				<P class="paragrafo">As assinaturas podem ser usadas de maneira mais flexível também. O signatário só pode publicar Da (m). O verificador aplica Ea à assinatura; se o resultado produz uma mensagem sensata, isso prova a assinatura. No entanto, essa verificação funciona somente se a mensagem assinada original estiver em um idioma normal em vez de meros símbolos arbitrários.</p>
+			
+				<h5 class="subtitulo">Vantagem das Assinaturas Digitais Sobre as Assinaturas Escritas a Mão:</h5>
+				
+				<p class="paragrafo">A diferença crucial da assinatura manuscrita é que a assinatura eletrônica Da (m) está intimamente conectada com a mensagem, enquanto a assinatura manuscrita é adicionada à mensagem e sempre parece a mesma e é por isso que é fácil forjar. Como consequência, ninguém pode alterar a mensagem assinada Da (m) e tentar fazer parecer que a assinatura é da pessoa real. Pois, se Da (m) for alterado, a aplicação da chave pública Ea à mensagem assinada alterada Da (m) "renderiza um texto claro que aparecerá totalmente aleatório. </p>
+				
+				<h5 class="subtitulo">Problema das Assinaturas Digitais:</h5>
+				
+				<p class="paragrafo">Depois que uma assinatura inteira for publicada pelo signatário, qualquer pessoa poderá verificá-la. Mas, além disso, uma vez que a assinatura tenha sido verificada, (supondo que este é um documento originalmente assinado sem cópias após a assinatura), ninguém mais poderá verificar a assinatura. </p>
+				<p class="paragrafo">Uma solução óbvia para isso seria fazer cópias do documento assinado. </p>
+				<p class="paragrafo">Outra solução pode transformar o problema da assinatura digital em uma vantagem. Usando assinaturas digitais, podemos especificar quem irá verificar a assinatura exclusivamente:</p>
+				<p class="paragrafo"> Se, por exemplo, a Sra. Johnson quer que apenas o Sr. Whipkey possa verificar sua assinatura, ela pode proceder da seguinte maneira. Ela assina sua mensagem: Da (m). Agora ela encapsula sua mensagem assinada usando a chave pública do Sr. Whipkey: Ea (Da (m)). Então o Sr. Whipkey pode decifrar a mensagem assinada usando sua chave secreta: Da (Ea (Da (m))) e obter Da (m), a assinatura que todos normalmente obteriam. No entanto, apenas o Sr. Whipkey pode obtê-lo.</p>
+			
+				<h5 class="subtitulo">Variantes Especiais:</h5>
+					
+				<p class="paragrafo">Esquemas de Assinatura Invisível: Há certos casos em que o assinante pode não querer que ninguém, exceto o receptor, possa verificar sua assinatura. Um bom exemplo é se o remetente está pedindo dinheiro emprestado. O remetente gostaria de proteger a assinatura para que o destinatário não pudesse informar / se gabar aos amigos sobre a dívida. O remetente então usaria uma assinatura invisível, que é apenas "visível" com a cooperação do signatário. Uma vez que o receptor tenha inicialmente verificado a assinatura, a transação monetária pode ocorrer, e o signatário não precisa se preocupar com informações sobre seus assuntos pessoais serem comprometidos. Se, no entanto, o remetente não cumprir a dívida, o destinatário pode levar a assinatura ao tribunal e o tribunal (por meio de um mandado) pode forçar a cooperação do remetente a revelar a assinatura. Desta forma, o receptor também é protegido.</p>
+				<p class="paragrafo">Assinaturas da empresa: uma empresa pode ter uma única assinatura que vários de seus funcionários podem usar para indicar um documento específico proveniente dessa empresa. A desvantagem é que não é possível dizer de qual funcionário a mensagem foi enviada. Para garantir que a assinatura da empresa não seja mal utilizada, alguns programas exigem um quórum de membros da empresa para ativar a chave. Por exemplo, um presidente, ou dois vice-presidentes, ou 99 funcionários podem ser necessários para ativação; mas se houvesse apenas 98 funcionários ou apenas um vice-presidente, a assinatura não funcionaria porque não haveria autoridade suficiente para ativá-la.</p>
+		
+				<h5 class="subtitulo">Falsificações:</h5>
+				
+				<p class="paragrafo">Com as assinaturas digitais originais, a menção de "falsificação" enviou terror para os corações dos remetentes. Isso ocorre porque o remetente assume todos os riscos. Se uma chave pública pudesse abrir a mensagem, os tribunais aceitariam a assinatura real, responsabilizando o suposto remetente pela mensagem fraudulenta. </p>
+				<p class="paragrafo">Então, o esquema de assinatura de falha-parada foi criado. Normalmente, funciona da mesma forma que uma assinatura digital normal, exceto que há uma tentativa de falsificação. Na criação da chave fail-stop, há algoritmos adicionados para que uma falsificação realmente crie uma prova de que o remetente pode usar para se defender. Quando o esquema falha, o remetente pára de usar a assinatura digital completamente (daí o nome "fail-stop"). Isso aumenta a segurança ao ponto de que a única maneira de uma falsificação não ser detectada (ou não ser comprovada) é se a chave privada é roubada. </p>
+				
+				<p class="paragrafo">Artigo Original: <a class="link" href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/dig_sig.html" target="__blank">https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/dig_sig.html</a></p>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<a href="https://www.facebook.com/profile.php?id=100029665314306&ref=bookmarks" target="_blank"><li><img src="imagens/facebook.svg" alt="Facebook icon" class="icon"></li></a>
+				<a href="https://twitter.com/Will_rar" target="_blank"><li><img src="imagens/twitter.svg" alt="Twitter icon" class="icon"></li></a>
+				<a href="https://www.linkedin.com/in/guilherme-ramos-13b1a7147/" target="_blank"><li><img src="imagens/linkedin.svg" alt="Linkedin icon" class="icon"></li></a>
+				<a href="https://github.com/GuilhermeRamous" target="_blank"><li><img src="imagens/github.svg" alt="Github icon" class="icon"></li></a>
+			</ul>
+
+			<div class="mensagem">Developed by Guilherme Ramos</div>
+
+		</footer>
+	</body>

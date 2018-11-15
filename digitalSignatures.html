@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Digital Signatures</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="indexENG.html">Home</a></li>
+					<li><a href="contatoENG.html">Contact</a></li>
+					<li><a href="desafiosENG.html">Challenges</a></li>
+					<li><a href="artigosENG.html">Articles</a></li>
+					<li><a href="desenvolvedorENG.html">Developer</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="digitalSignaturesPT.html">Português</a>
+				<a href="#">Log-in</a>
+				<a href="#">Sing-up</a>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="text">
+				<h1 class="titulo">Digital Signatures</h1>
+				
+				<p class="paragrafo">In order to understand this scheme let's recall some attributes of the usual handwritten signature. Suppose that Dr. Benson, has signed a prescription. Then ideally her signature should have the following characteristics:</p>
+				
+				<p class="paragrafoExemplo">* Only Dr. Benson may produce this signature, and</p>
+				<p class="paragrafoExemplo paragrafo"> *Anyone may verify that this signature is hers.</p>
+				
+				<p class="paragrafo">We can only achieve these characteristics using asymmetric systems like public key</P>
+				
+				<p class="paragrafoExemplo paragrafo">1. Dr. Benson wants to sign a message m ,then she</P>
+				<p class="paragrafoExemplo">* enciphers m with her private key Da (which she exclusively knows)</p>
+				<p class="paragrafoExemplo paragrafo">* publishes the message signed in this way Da(m) along with the message m itself. (While the encrypted message itself can serve as the signature, both the plain document and the encrypted message form a stronger unity and take the title of "certificate" for personal authentication.)</P>
+				<p class="paragrafo paragrafoExemplo">2. Any other participant may verify the electronic signature Da(m) by using Dr. Benson's public key Ea and checking whether m and Da(m) fit.</p>
+				<p class="paragrafo paragrafoExemplo">If we work with RSA, the verification works by applying ea to the signature Da(m) and checking whether the following equation holds. </P>
+				<p class="paragrafo paragrafoExemplo"> Ea(Da(m)) = m</P>
+				<P class="paragrafo">Signatures can be used in a more flexible way too. The signer can only publish Da(m). The verifier applies Ea to the signature; if the outcome yields a sensible message then this proves the signature. Yet this verification works only if the original signed message is in a normal language rather than mere arbitrary symbols.</p>
+			
+				<h5 class="subtitulo">Advantage of Digital Signatures Vs. Handwritten Signatures</h5>
+				
+				<p class="paragrafo">The crucial difference of the handwritten signature is that the electronic signature Da(m) is intimately connected with the message, whereas the handwritten signature is added to the message and always looks the same and that's why is easy to forge. As a consequence no one can alter the signed message Da(m) and trying to make it seem as if the signature is by the real person. For, if Da(m) is altered at all, then the application of the public key Ea to the altered signed message Da(m)" yields a clear text which will appear totally random. </p>
+				
+				<h5 class="subtitulo">Problem With Digital Signatures</h5>
+				
+				<p class="paragrafo">Once an entire signature is published by the signer, anyone can verify it. But moreover once the signature has been verified, (assuming that this is an originally signed document with no copies after being signed) no one else may verify the signature. </p>
+				<p class="paragrafo">One obvious solution to this would be to make copies of the signed document. </p>
+				<p class="paragrafo">Another solution could turn the problem of digital signature into an advantage. Using digital signatures we can specify who will verify the signature exclusively:</p>
+				<p class="paragrafo"> If, for instance, Mrs. Johnson wants only Mr. Whipkey to be able to verify her signature, she can proceed as follows. She signs her message: Da(m). Now she enciphers her signed message using Mr. Whipkey's public key: Ea(Da(m)). Then Mr. Whipkey may decipher the signed message using his secret key: Da(Ea(Da(m))) and get Da(m), the signature everyone would normally get. Yet in this only Mr. Whipkey can get it.</p>
+			
+				<h5 class="subtitulo">Special Variants</h5>
+					
+				<p class="paragrafo">Invisible Signature Schemes: There are certain cases where the signer might not want anyone but the receiver to be able to verify his/her signature. A good example is if the sender is borrowing money. The sender would want to protect the signature so the receiver could not inform/brag to friends about the debt. The sender would then use an invisible signature, which is only "visible" with the signer's cooperation. Once the receiver has initially verified the signature, the money transaction can take place, and the signer need not worry about information about his/her personal affairs being compromised. If, though, the sender does not make good on the debt, the receiver can take the signature to court and the court (through a warrant) can force the sender's cooperation to reveal the signature. In this way, the receiver is protected also.</p>
+				<p class="paragrafo">Company Signatures: A company can have a single signature which several of its employees can use to indicate a specific document came from that company. The downside is that it is not possible to tell from which employee the message was sent. To insure that the company signature is not misused, some programs require a quorum of company members to activate the key. For instance, one president, or two vice-presidents, or 99 employees might be needed for activation; but if there were only 98 employees or only one vice-president, the signature wouldn't work because there would not be enough authority to activate it.</p>
+		
+				<h5 class="subtitulo">Forgeries</h5>
+				
+				<p class="paragrafo">With the original digital signatures, the mention of "forgery" sent terror into the hearts of senders. This is because the sender bears all risk. If a public key could open the message, then the courts would accept it has the real signature, holding the supposed sender responsible for the fraudulent message. </p>
+				<p class="paragrafo">So the fail-stop signature scheme was devised. I t normally works the same way as a regular digital signature, except there is an attempted forgery. In the making of the fail-stop key, there are algorithms added so that a forgery actually creates proof that the sender can use to defend him/herself. Once the scheme fails, the sender stops using the digital signature entirely (hence the name "fail-stop".) This increases security to the point that the only way a forgery can go undetected (or unable to be proven at least) is if the private key is stolen. </p>
+				
+				<p class="paragrafo">Original article: <a class="link" href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/dig_sig.html" target="__blank">https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/dig_sig.html</a></p>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<a href="https://www.facebook.com/profile.php?id=100029665314306&ref=bookmarks" target="_blank"><li><img src="imagens/facebook.svg" alt="Facebook icon" class="icon"></li></a>
+				<a href="https://twitter.com/Will_rar" target="_blank"><li><img src="imagens/twitter.svg" alt="Twitter icon" class="icon"></li></a>
+				<a href="https://www.linkedin.com/in/guilherme-ramos-13b1a7147/" target="_blank"><li><img src="imagens/linkedin.svg" alt="Linkedin icon" class="icon"></li></a>
+				<a href="https://github.com/GuilhermeRamous" target="_blank"><li><img src="imagens/github.svg" alt="Github icon" class="icon"></li></a>
+			</ul>
+
+			<div class="mensagem">Developed by Guilherme Ramos</div>
+
+		</footer>
+	</body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>O que é RSA?</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn.</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contatoPT.html">Contato</a></li>
+					<li><a href="#">Desafios</a></li>
+					<li><a href="artigosPT.html">Artigos</a></li>
+					<li><a href="#">Desenvolvedor</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="RSA_ENG.html">English</a>
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="text">
+				<h5 class="titulo">O que é RSA?</h5>
+				<p class="paragrafo">O RSA é um sistema de criptografia para criptografia de chave pública e é amplamente usado para proteger dados confidenciais, especialmente ao ser enviado por uma rede insegura, como a Internet.</p>
+				<p class="paragrafo">A RSA foi descrita pela primeira vez em 1977 por Ron Rivest, Adi Shamir e Leonard Adleman, do Massachusetts Institute of Technology. A criptografia de chave pública, também conhecida como criptografia assimétrica, usa duas chaves diferentes, mas ligadas matematicamente, uma pública e outra privada. A chave pública pode ser compartilhada com todos, enquanto a chave privada deve ser mantida em segredo. Na criptografia RSA, as chaves pública e privada podem criptografar uma mensagem; a chave oposta àquela usada para criptografar uma mensagem é usada para descriptografá-la. Esse atributo é um dos motivos pelos quais o RSA se tornou o algoritmo assimétrico mais amplamente utilizado: ele fornece um método para garantir a confidencialidade, integridade, autenticidade e não-reputação das comunicações eletrônicas e do armazenamento de dados.</p>
+				<p class="paragrafo">Muitos protocolos como SSH, OpenPGP, S / MIME e SSL / TLS contam com o RSA para funções de criptografia e assinatura digital. Ele também é usado em programas de software - os navegadores são um exemplo óbvio, que precisa estabelecer uma conexão segura em uma rede insegura como a Internet ou validar uma assinatura digital. A verificação de assinaturas RSA é uma das operações mais comumente realizadas em TI.</p>
+
+				<h5 class="subtitulo">Explicando a popularidade do RSA:</h5>
+				
+				<p class="paragrafo"> RSA deriva sua segurança da dificuldade de fatorar grandes inteiros que são o produto de dois grandes números primos. A multiplicação desses dois números é fácil, mas a determinação dos números primos originais é considerada inviável devido ao tempo que levaria até mesmo usando os supercomputadores atuais.</p>
+				<p class="paragrafo">O algoritmo de geração de chave pública e privada é a parte mais complexa da criptografia RSA. Dois grandes números primos, p e q, são gerados usando o algoritmo de teste de primalidade de Rabin-Miller. Um módulo n é calculado multiplicando p e q. Esse número é usado pelas chaves públicas e privadas e fornece o link entre elas. Seu comprimento, geralmente expresso em bits, é chamado comprimento da chave. A chave pública consiste no módulo n, e um expoente público, e, que é normalmente definido em 65537, como é um número primo que não é muito grande. A figura e não precisa ser um número primo secretamente selecionado, pois a chave pública é compartilhada com todos. A chave privada consiste no módulo n e no expoente privado d, que é calculado usando o algoritmo Euclideano Estendido para encontrar o inverso multiplicativo em relação ao totiente de n.</p>
+
+				<h5 class="subtitulo">Um exemplo simples e funcional:</h5>
+
+				<p class="paragrafo">Alice gera suas chaves RSA selecionando dois números primos: p = 11 e q = 13. O módulo n = p × q = 143. O totiente de n ϕ (n) = (p − 1) x (q − 1) = 120. Ela escolhe 7 para sua chave pública RSA e calcula sua chave privada RSA usando o Algoritmo Euclideano Estendido, que lhe fornece 103.</p>
+				<p class="paragrafo">Bob quer enviar uma mensagem criptografada a Alice para que ele obtenha sua chave pública RSA (n, e), que neste exemplo é (143, 7). Sua mensagem de texto simples é apenas o número 9 e é criptografada no texto cifrado C da seguinte maneira:</p>
+
+				<p class="paragrafoExemplo paragrafo">Me mod n = 97 mod 143 = 48 = C</p>
+
+				<p class="paragrafo">Quando Alice recebe a mensagem de Bob, ela a descriptografa usando sua chave privada RSA (d, n) da seguinte maneira:</p>
+
+				<p class="paragrafoExemplo paragrafo">Cd mod n = 48103 mod 143 = 9 = M</p>
+
+				<p class="paragrafo">Para usar chaves RSA para assinar digitalmente uma mensagem, Alice criaria um hash ou um resumo de mensagem de sua mensagem para Bob, criptografaria o valor de hash com sua chave privada RSA e o adicionaria à mensagem. Bob pode, então, verificar se a mensagem foi enviada por Alice e não foi alterada descriptografando o valor de hash com sua chave pública. Se esse valor corresponder ao hash da mensagem original, somente Alice poderia tê-lo enviado (autenticação e não-repúdio) e a mensagem é exatamente como ela o escreveu (integridade). É claro que Alice poderia criptografar sua mensagem com a chave pública de RSA de Bob (confidencialidade) antes de enviá-la para Bob. Um certificado digital contém informações que identificam o proprietário do certificado e também contém a chave pública do proprietário. Os certificados são assinados pela autoridade de certificação que os emitem e podem simplificar o processo de obtenção de chaves públicas e de verificação do proprietário</p>
+
+				<h5 class="subtitulo">Segurança do RSA:</h5>
+
+				<p class="paragrafo">Como discutido, a segurança do RSA depende da dificuldade computacional de fatorar inteiros grandes. À medida que o poder de computação aumenta e algoritmos de fatoração mais eficientes são descobertos, a capacidade de fatorar números cada vez maiores também aumenta. A força da criptografia está diretamente ligada ao tamanho da chave e a duplicação do tamanho da chave proporciona um aumento exponencial da força, embora prejudique o desempenho. As chaves RSA têm normalmente 1024 ou 2048 bits, mas os especialistas acreditam que chaves de 1024 bits podem ser quebradas em um futuro próximo, e é por isso que o governo e a indústria estão mudando para um comprimento de chave mínimo de 2048 bits. Exceto um avanço imprevisto na computação quântica, deve levar muitos anos para que chaves mais longas sejam necessárias, mas a criptografia de curva elíptica está ganhando muitos especialistas em segurança como uma alternativa ao RSA para implementar a criptografia de chave pública. Pode criar chaves criptográficas mais rápidas, menores e mais eficientes. Grande parte do hardware e software de hoje é compatível com ECC e sua popularidade provavelmente crescerá, pois pode oferecer segurança equivalente com menor poder de computação e uso de recursos de bateria, o que o torna mais adequado para aplicativos móveis do que o RSA. Finalmente, uma equipe de pesquisadores que incluiu Adi Shamir, um co-inventor da RSA, determinou com sucesso uma chave RSA de 4096 bits usando uma análise criptográfica acústica, no entanto, qualquer algoritmo de criptografia é vulnerável a esse tipo de ataque..</p>
+
+				<p class="paragrafo">Os inventores do algoritmo RSA fundaram a RSA Data Security em 1983. A empresa foi posteriormente adquirida pela Security Dynamics, que por sua vez foi comprada pela EMC Corporation em 2006. O algoritmo RSA foi liberado para o domínio público pela RSA Security em 2000.</p>
+
+				<p class="paragrafo">Artigo original: <a class="link" href="https://searchsecurity.techtarget.com/definition/RSA" target="__blank">https://searchsecurity.techtarget.com/definition/RSA</a></p>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<a href="https://www.facebook.com/home.php" target="_blank"><li><img src="imagens/facebook.svg" alt="Facebook icon" class="icon"></li></a>
+				<a href="https://twitter.com/Will_rar" target="_blank"><li><img src="imagens/twitter.svg" alt="Twitter icon" class="icon"></li></a>
+				<a href="https://www.linkedin.com/in/guilherme-ramos-13b1a7147/" target="_blank"><li><img src="imagens/linkedin.svg" alt="Linkedin icon" class="icon"></li></a>
+				<a href="https://github.com/GuilhermeRamous" target="_blank"><li><img src="imagens/github.svg" alt="Github icon" class="icon"></li></a>
+			</ul>
+
+			<div class="mensagem">Desenvolvido por Guilherme Ramos</div>
+
+		</footer>
+	</body>		

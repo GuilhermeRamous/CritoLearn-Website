@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>História da Criptografia</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noticia+Text" rel="stylesheet">
+	</head>
+	<body>
+		<header> 
+			<div class="logo">CriptoLearn</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contatoPT.html">Contato</a></li>
+					<li><a href="desafiosPT.html">Desafios</a></li>
+					<li><a href="artigosPT.html">Artigos</a></li>
+					<li><a href="desenvolvedorPT.html">Desenvolvedor</a></li>
+				</ul>
+			</div>
+			<div class="login-singup">
+				<a href="criptography.html">English</a>
+				<a href="#">Entrar</a>
+				<a href="#">Cadastrar</a>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="text">
+				<h1 class="titulo">História da Criptografia</h1>
+				
+				<p class="paragrafo">Esta página destina-se a fornecer informações sobre a história da criptografia, por que ela é necessária, para o que é usada e quais técnicas foram usadas, juntamente com as medidas usadas para quebrá-las.</p>
+				<p class="paragrafo">Corporações em todo o mundo precisam ter algum meio de transmitir dados secretos e confidenciais. Quer se trate de informações de crédito ou estratégias da empresa, há um enorme fluxo de dados entre muitas fontes que precisa ser mantido de alguma forma em segredo e a criptografia é o caminho para alcançar isso. Houve muitos métodos propostos e tentados. Começamos com uma técnica conhecida como criptografia de chave privada.</p>
+				
+				<h5 class="subtitulo">Criptografia de Chave Privada</h5>
+				
+				<p class="paragrafo">A criptografia de chave privada é talvez o método mais tradicional de criptografia. Um usuário usaria uma chave que só ele sabia criptografar uma mensagem usando alguma função T. Talvez o primeiro criptossistema tenha sido desenvolvido pelo historiador grego Polybios. Ele usou uma grade de letras em que cada letra da mensagem foi substituída pelas duas letras que indicavam a linha e a coluna em que se encontra a carta original. Aqui está um quadrado Polybios com o alfabeto Inglês excluindo a letra J.</p>
+				
+				<p class="paragrafoExemplo">S	Y	D	W	Z</p>
+				<p class="paragrafoExemplo">R	I	P	U	L</p>
+				<p class="paragrafoExemplo">H	C	A	X	F</p>
+				<p class="paragrafoExemplo">T	N	O	G	E</p>
+				<p class="paragrafoExemplo paragrafo">B	K	M	Q	V</p>
+				
+				<p class="paragrafo">Aqui P seria substituído por RD e G seria substituído por TW. O próximo sistema que exploramos é o sistema CAESAR. Embora Suetônio afirme que César usou esse sistema, César realmente substituiu suas letras latinas por outras gregas de uma forma que ele não deixou totalmente claro. O sistema que leva seu nome usa uma técnica simples e uma chave privada. Neste sistema, cada letra é substituída pela k-ésima letra, onde k é a chave. Por exemplo, digamos que a mensagem fosse a palavra "PRIVATE" e usamos a chave privada k = 4. Sob o sistema CAESAR isso renderia TVMZEXI. O usuário poderia enviar essa mensagem para o destinatário que também conhecia o algoritmo e a chave. Este é um exemplo muito simples de um algoritmo de chave privada.</p>
+				<p class="paragrafo">A Cifra de Cesar é muito fácil de quebrar se um forasteiro conhecesse o algoritmo, independentemente de ter ou não a chave. Uma pessoa precisaria apenas experimentar um máximo de 26 permutações antes de encontrar uma palavra inteligível. A maioria dos algoritmos de chave privada modernos é realmente muito mais complexo e, portanto, mais difícil de quebrar, mas todos eles dependem da chave que permanece privada. O problema então se torna o transporte da chave para a pessoa que receberá a mensagem. Isso geralmente é feito por um mensageiro, mas o custo de mudar e distribuir chaves se torna bastante caro.</p>
+				<p class="paragrafo">Em 1977, o National Bureau of Standards criou o Data Encryption Standard (DES), que era bastante revolucionário na época. O DES foi a primeira tentativa de criar um padrão de criptografia universal. O DES foi extremamente bem-sucedido e ainda permanece como o sistema criptográfico mais utilizado de todos os tempos. Alguns dos principais atributos do DES são que o algoritmo é extremamente rápido e se comporta de acordo com o efeito de avalanche. O que isto significa é que uma pequena mudança na sua chave produzirá grandes diferenças no criptografado produzido, tornando assim o DES muito difícil de quebrar. Quebras teóricas de DES têm sido propostas, mas elas ainda são muito caras e levam muito tempo para serem consideradas verdadeiros riscos de segurança. Máquinas projetadas especificamente para quebrar os DES foram propostas, mas suas estimativas de preço podem variar de milhões de dólares a centenas de milhões de dólares e suas estimativas de desempenho variam de horas a cem dias.</p>
+				
+				<h5 class="subtitulo">Criptografia de Chave Pública</h5>
+				
+				<p class="paragrafo">É aqui que entra em jogo a criptografia de chave pública. A idéia principal por trás da criptografia de chave pública é que não apenas um deles pode tornar público seu algoritmo, como também pode tornar público seu público-alvo. Uma pessoa pode publicar sua chave pública em um diretório, e qualquer pessoa que deseje enviar essa informação segura pode criptografar essa informação usando a chave pública e enviá-la por canais inseguros. Então, quando o criptograma chega ao receptor, ele pode decodificá-lo usando sua chave privada. Dessa forma, qualquer pessoa pode criptografar informações, mas somente a pessoa com a chave privada pode descriptografá-la. A criptografia de chave pública é muito parecida com procurar o número de telefone de alguém em uma lista telefônica grande. Se você souber o nome da pessoa, como ter a chave privada, é fácil descobrir as informações. Se, no entanto, você só tiver o número de telefone, deverá procurar cada entrada, uma a uma. Assim, quanto maior a quantidade possível de nomes, mais difícil e difícil se tornaria encontrar uma pessoa.</p>
+				<p class="paragrafo">A idéia de criptografia de chave pública foi apresentada pela primeira vez por Martin Hellman, Ralph Merkle e Whitfield Diffie na Universidade de Stanford em 1976. Eles usaram um método que eles chamaram de problema de soma de subconjuntos, mas que veio a ser conhecido como problema de mochila. A <a class="link" href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/animate2.html" target="__blank"> mochila </a> um problema é baseado no problema completo do NP que, dado um container de tamanho específico e um conjunto de blocos distintos, pode-se encontrar apenas o conjunto de blocos que se encaixa exatamente no container usando uma busca exaustiva ou usando um conhecimento especial sobre o problema.</p>
+				<p class="paragrafo">No problema da mochila, a chave pública dada é uma n-tupla A = (a1, a2, ..., an) de inteiros positivos distintos, bem como outro inteiro positivo k. A questão é então quais inteiros ai soma para igual a k. Por exemplo, se quiséssemos codificar a mensagem SECRET, poderíamos converter cada letra em formato binário.</p>
+				
+				<p class="paragrafoExemplo">S  = 1010011 </p>
+				<p class="paragrafoExemplo">E  = 1000101</p>
+				<p class="paragrafoExemplo">C  = 1000011</p>
+				<p class="paragrafoExemplo">R  = 1010010</p>
+				<p class="paragrafoExemplo">E  = 1000101</p>
+				<p class="paragrafoExemplo paragrafo">T = 1010100 </p>
+					
+				<p class="paragrafo">Como cada letra corresponde a um número binário com 7 dígitos, podemos definir n = 7. Para tornar o problema mais difícil de quebrar, poderíamos combinar 2 letras para fazer n = 14 e assim por diante, mas para este exemplo vamos manter n em 7. Primeiro escolhemos uma chave privada composta de n números. Para este exemplo, usaremos A = (1,2,5,11,32,87,141). Observe que, a partir da direita, cada número é maior do que todos os números à esquerda. Isso se tornará útil ao descriptografar a mensagem.</p>
+				<p class="paragrafo">Em seguida, escolhemos mais dois números: m tal que é maior que a soma de todos ai e w que não devem ter fatores comuns com m. Usaremos w = 901 e m = 1234. Usamos estes para estabelecer nossa chave pública pela equação ai = w * ai mod m, onde ai é qualquer membro único na chave pública e ai é o membro correspondente na chave privada . Isso nos dá uma chave pública de A = (901,568,803,39,450,645,1173).</p>
+				
+				<p class="paragrafoExemplo paragrafo">B = 1 x (901) + 0 x (568) + 1 x (803) + 0 x (39) + 0 x (450) + 1 x (645) + 1 x (1173) = 3522</p>
+				
+				<p class="paragrafo">Se, então, enviarmos o número 3522 para o receptor, ele poderá descriptografá-lo usando sua chave privada e a equação B = B * w ^ (- 1) mod m, onde w ^ (- 1) é o inverso multiplicativo de w. Isto dá-nos: B = 3522 * (901) ^ (- 1) mod 1234 = 3522 * 1171 mod 1234 = 234.</p>
+				<p class="paragrafo">Agora ficamos para encontrar a combinação de A que produzirá 234. Isso é feito facilmente devido à propriedade mencionada anteriormente de que cada membro de A é maior do que todos os membros à direita dele, somados. Neste exemplo, obtemos 141 + 87 + 5 + 1 ou 1010011, o que é o mesmo que originalmente criptografamos. Essa solução sempre pode ser encontrada sem a chave, tentando todos os subconjuntos de A, mas se houver centenas e centenas de números ai, o problema rapidamente se tornará incontrolável sem a chave.</p>
+				
+				<h5 class="subtitulo">Por que Criptografia de Chave Pública Funciona?</h5>
+				
+				<p class="paragrafo">A criptografia de chave pública conta com a suposição de que não existe um "atalho" para resolver qualquer um desses algoritmos. De acordo com a teoria da complexidade, se alguém tiver que tentar uma enorme quantidade de possibilidades para encontrar o caminho certo, a pesquisa não valerá a pena nem será bem-sucedida. Todos os algoritmos de chave pública são considerados não solucionáveis ​​em tempo polinomial. Acredita-se que eles sejam solucionáveis ​​apenas no tempo exponencial. Há um debate em andamento sobre a questão de saber se realmente existem problemas que não podem ser resolvidos em tempo polinomial. Esta questão é conhecida como a questão P = NP, onde P é o conjunto de todas as equações que podem ser resolvidas em tempo polinomial e NP são as questões que não podem ser resolvidas em tempo polinomial. Enquanto a maioria das pessoas atualmente acredita que P não é igual a NP, se essa suposição fosse provada incorreta, isso significaria que nenhum algoritmo de chave pública é totalmente seguro. Mesmo se P não for igual a NP, certos algoritmos podem ter uma solução de tempo polinomial, ou certos algoritmos NP completos podem ter um backdoor, como foi o caso do algoritmo Hellman, Merkle, Diffie Knapsack.</p>
+				<p class="paragrafo">Enquanto o problema da mochila continua NP completo, Adi Shamir do MIT encontrou uma maneira para uma pessoa sem a chave privada evitar fazer uma busca exaustiva das combinações. O ataque de Shamir encontra a chave privada que irá descriptografar algo criptografado com uma determinada chave pública, para que se possa encontrar a chave antes mesmo de uma mensagem ser enviada. O método de Shamir encontra um w e um m (números usados para fazer a chave pública a partir da chave privada - veja acima) que funcionarão como chaves privadas. Eles podem não ser o mesmo que o original, mas funcionarão da mesma forma. O fato de que o detentor da chave privada usou originalmente um w e um m garantem que pelo menos um de cada um existirá, e o fato de que eles não precisam ser primos sugere que pode haver vários pares de w e m que produzirão o mesmo resultado. Ele encontra w & m representando graficamente aiw (mod m) para todos i = 1, ..., n.</p>
+				<p class="paragrafo">Se, então, sobrepormos vários gráficos para i's diferentes e olharmos para os pontos de acumulação de mínimos de todas as curvas, podemos obter w e, assim, calcular m.</p>
+				
+				<p class="paragrafo">Artigo original: <a class="link" href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/history.html" target="__blank">https://cs.stanford.edu/people/eroberts/courses/soco/projects/public-key-cryptography/history.html</a></p>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<a href="https://www.facebook.com/profile.php?id=100029665314306&ref=bookmarks" target="_blank"><li><img src="imagens/facebook.svg" alt="Facebook icon" class="icon"></li></a>
+				<a href="https://twitter.com/Will_rar" target="_blank"><li><img src="imagens/twitter.svg" alt="Twitter icon" class="icon"></li></a>
+				<a href="https://www.linkedin.com/in/guilherme-ramos-13b1a7147/" target="_blank"><li><img src="imagens/linkedin.svg" alt="Linkedin icon" class="icon"></li></a>
+				<a href="https://github.com/GuilhermeRamous" target="_blank"><li><img src="imagens/github.svg" alt="Github icon" class="icon"></li></a>
+			</ul>
+
+			<div class="mensagem">Desenvolvido por Guilherme Ramos</div>
+
+		</footer>
+	</body>
